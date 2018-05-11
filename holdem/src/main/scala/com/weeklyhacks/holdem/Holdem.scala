@@ -17,10 +17,10 @@ object Holdem {
     }
 
     // Populate the deck with default set of 52 cards
-    var deck = CardSet.default
+    var deck = CardStack.default
     // Table and players start with empty sets
-    var table = CardSet.empty
-    var players = (0 until numPlayers).map(_ => CardSet.empty).toList
+    var table = CardStack.empty
+    var players = (0 until numPlayers).map(_ => CardStack.empty).toList
     printState("Initial", deck, table, players)
     printState("Initial [open]", deck, table, players, openCards = true)
 
@@ -64,7 +64,7 @@ object Holdem {
     printState("River dealt [open]", deck, table, players, openCards = true)
   }
 
-  def printState(title: String, deck: CardSet, table: CardSet, players: List[CardSet], openCards: Boolean = false): Unit = {
+  def printState(title: String, deck: CardStack, table: CardStack, players: List[CardStack], openCards: Boolean = false): Unit = {
     println(s"=== $title ===")
     println(s" Deck     : ${if (openCards) deck.open else deck}")
     println(s" Table    : ${if (openCards) table.open else table}")
