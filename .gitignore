@@ -4,5 +4,4 @@ target/
 .settings/
 .idea/
 *.iml
-src/main/resources/apidocs/
 **.DS_Store
