@@ -1,0 +1,8 @@
+target/
+.project
+.classpath
+.settings/
+.idea/
+*.iml
+src/main/resources/apidocs/
+**.DS_Store
